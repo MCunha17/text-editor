@@ -1,4 +1,4 @@
-# Text Editor Starter Code
+# Text Editor
 [Starter code](https://github.com/coding-boot-camp/cautious-meme)
 
 ## Technologies
