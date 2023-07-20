@@ -32,33 +32,41 @@ module.exports = () => {
         description: 'A Progressive Web App text editor',
         background_color: '#ffffff',
         theme_color: '#ffffff',
+        start_url: '/',
+        publicPath: '/',
+        fingerprints: false,
+        inject: true,
         icons: [
           {
-            src: path.resolve('src/assets/icon.png'),
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join('icons'),
+            destination: path.join('assets', 'icons'),
           },
         ],
       }),
       new InjectManifest({
-        swSrc: './src/service-worker.js',
-        exclude: [/\.map$/, /asset-manifest\.json$/],
+        swSrc: './src-sw.js',
+        swDest: 'service-worker.js',
       }),
     ],
 
     module: {
       rules: [
         {
-          test: /\.css$/,
+          test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
         {
-          test: /\.js$/,
+          test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
+              plugins: [
+                '@babel/plugin-proposal-object-rest-spread',
+                '@babel/transform-runtime',
+              ],
             },
           },
         },
