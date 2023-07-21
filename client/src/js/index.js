@@ -1,6 +1,6 @@
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
-import './database';
+import { putDb, getDb } from './database';
 import '../css/style.css';
 
 // Select the main element and clear its content
@@ -29,7 +29,7 @@ if (typeof editor === 'undefined') {
 // Check if service workers are supported
 if ('serviceWorker' in navigator) {
   // Register workbox service worker
-  const workboxSW = new Workbox('../src-sw.js');
+  const workboxSW = new Workbox('/src-sw.js');
   workboxSW.register()
     .then((registration) => {
       console.log('Service Worker registered:', registration);
@@ -40,3 +40,32 @@ if ('serviceWorker' in navigator) {
 } else {
   console.error('Service workers are not supported in this browser.');
 }
+
+// Get a reference to the text editor element
+const textEditor = document.getElementById('editor');
+
+// Function to load the content from IndexedDB and display it in the editor
+const loadContentFromDB = async () => {
+  const content = await getDb();
+  if (content) {
+    textEditor.value = content.content;
+  }
+};
+
+// Load the content from IndexedDB and display it in the editor
+loadContentFromDB();
+
+// Event listener for the blur event on the text editor
+textEditor.addEventListener('blur', () => {
+  // Get the current content of the text editor
+  const content = textEditor.value;
+
+  // Save the content to IndexedDB using the putDb function
+  putDb({ content })
+    .then(() => {
+      console.log('Content saved to IndexedDB:', content);
+    })
+    .catch((error) => {
+      console.error('Error saving content to IndexedDB:', error);
+    });
+});
