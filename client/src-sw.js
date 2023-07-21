@@ -50,3 +50,5 @@ registerRoute(
 		],
 	})
 );
+
+console.log('Service worker has been registered.');
