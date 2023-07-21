@@ -24,12 +24,12 @@ module.exports = () => {
 			}),
 			new WebpackPwaManifest({
 				// Plugin to generate the PWA manifest file
-				name: 'JATE',
+				name: 'Just Another Text Editor',
 				short_name: 'JATE',
-				description: 'Just Another Text Editor',
+				description: 'Take notes with JavaScript syntax highlighting!',
 				display: 'standalone',
-				background_color: '#1e1e1e',
-				theme_color: '#1e1e1e',
+				background_color: '#225ca3',
+				theme_color: '#225ca3',
 				start_url: '/',
 				publicPath: '/',
 				fingerprints: false,
