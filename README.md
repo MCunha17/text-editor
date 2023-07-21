@@ -80,6 +80,7 @@ The following resources were referenced to create this application:
 * MDN Web Docs: [IndexDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
 * Chrome Dev: [Workbox-Webpack-Plugin](https://developer.chrome.com/docs/workbox/reference/workbox-webpack-plugin/#type-GenerateSWConfig)
 * npmjs: [Webpack-PWA-Manifest](https://www.npmjs.com/package/webpack-pwa-manifest)
+* npmjs: [Concurrently](https://www.npmjs.com/package/concurrently)
 
 ## Questions
 If you have any questions, please visit my GitHub profile [MCunha17](https://github.com/MCunha17) or contact me at cunha.maria.theresa@gmail.com.
