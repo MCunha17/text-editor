@@ -15,9 +15,8 @@ This Text Editor was created using [starter code](https://github.com/coding-boot
 
 You can access the deployed application [here](https://install-text-editor-e4e157895075.herokuapp.com/) and the GitHub repository [here](https://github.com/MCunha17/text-editor).
 
-![Screenshot of application](/public/assets/images/note-taker-app-screenshot.png)
-
 ## Table of Contents
+* [Screenshots](#screenshots)
 * [Features](#features)
 * [Usage](#usage)
 * [Technologies Used](#technologies-used)
@@ -26,6 +25,19 @@ You can access the deployed application [here](https://install-text-editor-e4e15
 * [License](#license)
 * [Resources](#resources)
 * [Questions](#questions)
+
+## Screenshots
+Screenshot of deployed application:
+![Screenshot of application](/images/text-editor-install.jpg)
+
+Screenshot of application's manifest.json file:
+![Screenshot of manifest.json](/images/text-editor-app-manifest.jpg)
+
+Screenshot of application's registered service worker:
+![Screenshot of manfest.json](/images/text-editor-service-worker.jpg)
+
+Screenshot showing the application's IndexedDB storage:
+![Screenshot of IndexedDB storage](/images/text-editor-indexedDB.jpg)
 
 ## Features
 * Text Editing: The Text Editor provides a user-friendly interface for creating note snippets.
