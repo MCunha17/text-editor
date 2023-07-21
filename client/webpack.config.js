@@ -18,10 +18,12 @@ module.exports = () => {
 			path: path.resolve(__dirname, 'dist'),
 		},
 		plugins: [
+			// Plugin to generate the HTML file for the app
 			new HtmlWebpackPlugin({
 				template: './index.html',
 			}),
 			new WebpackPwaManifest({
+				// Plugin to generate the PWA manifest file
 				name: 'JATE',
 				short_name: 'JATE',
 				description: 'Just Another Text Editor',
@@ -40,6 +42,7 @@ module.exports = () => {
 					},
 				],
 			}),
+			// Plugin to inject the service worker into the bundle
 			new InjectManifest({
 				swSrc: './src-sw.js',
 				swDest: 'service-worker.js',

@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
   });
 
-  // TODO: Add an event handler for the `appinstalled` event
+  // Event handler for the `appinstalled` event
   window.addEventListener('appinstalled', (event) => {
     // Hide the install button
     butInstall.style.display = 'none';

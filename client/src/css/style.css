@@ -8,6 +8,7 @@
   --navbar-height: 50px;
 }
 
+/* Global styles for the body */
 body {
   margin: 0;
   background-color: var(--monoaki);
@@ -16,10 +17,12 @@ body {
     sans-serif;
 }
 
+/* Heading styles */
 h1 {
   font-size: 22px;
 }
 
+/* Navbar styles */
 #navbar {
   height: var(--navbar-height);
   background-color: var(--primary);
@@ -37,6 +40,7 @@ h1 {
   padding-top: 10px;
 }
 
+/* Loading spinner animation styles */
 .loading-spinner {
   animation-duration: 0.75s;
   animation-iteration-count: infinite;
@@ -49,6 +53,7 @@ h1 {
   border-radius: 50%;
 }
 
+/* Styles for the container displaying loading state */
 .loading-container {
   display: flex;
   justify-content: center;
@@ -56,6 +61,7 @@ h1 {
   height: calc(100vh - var(--navbar-height));
 }
 
+/* Keyframe animation for rotating the spinner */
 @keyframes rotate-forever {
   0% {
     transform: rotate(0deg);
@@ -66,6 +72,7 @@ h1 {
   }
 }
 
+/* Styles for the app update notification */
 .app-update {
   display: none;
   position: absolute;
@@ -76,6 +83,7 @@ h1 {
   display: block;
 }
 
+/* Button styles */
 .nav-btn {
   margin: 25px;
 }
@@ -120,6 +128,7 @@ h1 {
   text-align: center;
 }
 
+/* Button color variations */
 .btn.btn-primary {
   background-color: #2d3e50;
   color: #d9e9e8;
@@ -192,6 +201,7 @@ h1 {
   background-color: #31a9e1;
 }
 
+/* Media query for responsive styles */
 @media only screen and (max-width: 600px) {
   .nav-btn {
     display: none;
